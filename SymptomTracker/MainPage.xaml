@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SymptomTracker;assembly=SymptomTracker"
+             x:Class="SymptomTracker.MainPage">
+
+    <Grid>
+        <!-- Define rows for Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Sort Options -->
+            <RowDefinition Height="*"/>
+            <!-- ListView -->
+            <RowDefinition Height="Auto"/>
+            <!-- Add Button -->
+        </Grid.RowDefinitions>
+
+        <!-- Sort Options -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="20" Margin="10,10,0,0">
+            <Label Text="Sorting:" Margin="0,7,0,0"/>
+            <RadioButton Content="By date" 
+                 GroupName="SortOptions" 
+                 CheckedChanged="OnSortChanged" 
+                 Value="date" />
+            <RadioButton Content="By intensity" 
+                 GroupName="SortOptions" 
+                 CheckedChanged="OnSortChanged" 
+                 Value="intensity" />
+        </HorizontalStackLayout>
+
+        <!-- ListView for Recorded Symptoms -->
+        <ListView Grid.Row="1" x:Name="lv" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout Spacing="10">
+                            <!-- Color Square -->
+                            <BoxView WidthRequest="20" 
+                             HeightRequest="20" 
+                             Color="{Binding DisplayColor}"
+                             Margin="10,0,0,0"/>
+
+                            <!-- Date, Time and Notes -->
+                            <VerticalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="{Binding Date, StringFormat='{0:MM/dd/yyyy}'}" Margin="0,0,20,0" TextColor="Purple" />
+                                    <Label Text="{Binding DisplayTime}" TextColor="Purple" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Notes}" Margin="0,0,0,0" FontAttributes="Italic" FontFamily="System"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Add Button -->
+        <Button Grid.Row="2" Text="Add" Clicked="OnAddClicked" Margin="5,0,5,10" />
+
+    </Grid>
+</ContentPage>

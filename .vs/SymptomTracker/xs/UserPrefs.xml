@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{E7CE6576-C89A-4DF6-BC55-17110EE20465}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SymptomTracker/AddRecord.xaml.cs">
+    <Files>
+      <File FileName="SymptomTracker/MainPage.xaml" />
+      <File FileName="SymptomTracker/MainPage.xaml.cs" />
+      <File FileName="SymptomTracker/DB.cs" />
+      <File FileName="SymptomTracker/Symptom.cs" />
+      <File FileName="SymptomTracker/ModifyRecord.xaml" />
+      <File FileName="SymptomTracker/ModifyRecord.xaml.cs" />
+      <File FileName="SymptomTracker/AddRecord.xaml.cs" Line="15" Column="53" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SymptomTracker" expanded="True">
+            <Node name="SymptomTracker" expanded="True">
+              <Node name="AddRecord.xaml" expanded="True">
+                <Node name="AddRecord.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SymptomTracker PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+</Properties>
